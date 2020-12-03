@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		int n=in.nextInt();
+		int mini=50,sedan=80,suv=100;
+		int n1=n,n2=n,n3=n;
+		int b1=15,b2=15,b3=15;
+		if(n1>75) mini=n1*8;
+		else{
+		    if(n1>3) n1-=3;
+		    while(n1-->0 && b1-->0){
+		        mini+=10;
+		    }
+		    n1++;
+		    while(n1-->0){
+		        mini+=8;
+		    }
+		}
+		if(n2>100)  sedan=n2*10;
+		else{
+		    if(n2>5)  n2-=5;
+		    while(n2-->0 && b2-->0){
+		        sedan+=12;
+		    }
+		    n2++;
+		    while(n2-->0){
+		        sedan+=10;
+		    }
+		}
+		if(n3>5){
+		    n3-=5;
+		    while(n3-->0 && b3-->0){
+		        suv+=15;
+		    }
+		    n3++;
+		    while(n3-->0){
+		        suv+=12;
+		    }
+        }       
+		System.out.print("Mini - Rs. "+mini+",Sedan - Rs. "+sedan+",SUV - Rs. "+suv);
+	}
+}
